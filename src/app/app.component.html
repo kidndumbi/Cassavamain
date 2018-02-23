@@ -1,12 +1,12 @@
 <mat-toolbar style="background-color:white;color:teal">
-  <span>Cassava cleaned his plate.</span>
-  <button mat-button  [matMenuTriggerFor]="menu">Select a Project</button>
+  <span>Welcome to Cassava's Hub.</span>
+  <!-- <button mat-button  [matMenuTriggerFor]="menu">Select a Project</button>
   <mat-menu #menu="matMenu">
     <button mat-menu-item *ngFor="let proj of projects" (click)="routeToProject(proj)" >{{ proj.name }}</button>
-  </mat-menu>
+  </mat-menu> -->
   <app-project-header [projectHeader]="projectHeader" ></app-project-header>
 </mat-toolbar>
 
-<h1>DEMO COMING SOON!!</h1>
-
-<router-outlet></router-outlet>
+<div style="margin-left:10px;margin-top:15px">
+  <router-outlet></router-outlet>
+</div>

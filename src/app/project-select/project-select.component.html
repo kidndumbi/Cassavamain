@@ -1,3 +1,1 @@
-<p>
-  project-select works!
-</p>
+<app-project-list-item (selected)="receiveSelectedProj($event)" *ngFor="let proj of projectList" [project]="proj"></app-project-list-item>
