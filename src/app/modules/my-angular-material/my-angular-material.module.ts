@@ -3,6 +3,9 @@ import { CommonModule } from '@angular/common';
 import { MatButtonModule, MatCheckboxModule } from '@angular/material';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatCardModule } from '@angular/material/card';
+
 
 
 @NgModule({
@@ -11,12 +14,17 @@ import { MatIconModule } from '@angular/material/icon';
     MatButtonModule,
     MatCheckboxModule,
     MatToolbarModule,
-    MatIconModule
+    MatIconModule,
+    MatMenuModule,
+    MatCardModule
+
   ],
   exports: [MatButtonModule,
     MatCheckboxModule,
     MatToolbarModule,
-    MatIconModule],
+    MatIconModule, MatMenuModule, MatCardModule]
+  ,
+
   declarations: []
 })
 export class MyAngularMaterialModule { }
