@@ -1,16 +1,9 @@
-mat-card-actions {
-    display:flex;
-
+a{
+    text-decoration: none;
+    text-align: center;
+    color: white;
 }
 
-mat-chip-list {
-  flex:1;
-  order:2
+a:hover {
+    color: tomato;
 }
-.btn1 {
-   flex:1;
-   order:1
-}
-.btn2 {
-    flex:1;
- }
