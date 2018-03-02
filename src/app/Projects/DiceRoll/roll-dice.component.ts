@@ -33,24 +33,15 @@ export class RollDiceComponent implements OnInit {
  
   }
 
-  emit(){
-     this.diceservice.emitDice();
-  }
+  // emit(){
+  //    this.diceservice.emitDice();
+  // }
 
   rollDice() {
     this.diceservice.rollDice().then(data => {
 
       console.log('Dice roll done', data);
-      
 
-      let snackBarRef = this.snackBar.open('Dice roll done', "OK", {
-        duration: 2000,
-      });
-
-      snackBarRef.onAction().subscribe(() => {
-        console.log('The snack-bar action was triggered!');
-        snackBarRef.dismiss();
-      });
 
     });
   }

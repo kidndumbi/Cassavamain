@@ -1,3 +1,4 @@
+import { RollDiceComponent } from './Projects/DiceRoll/roll-dice.component';
 import { ChatterHomeComponent } from './Projects/Chatter/Components/chatter-home/chatter-home.component';
 import { ProjectSelectComponent } from './project-select/project-select.component';
 import {  Routes } from '@angular/router';
@@ -21,6 +22,10 @@ export const appRoutes: Routes = [
     {
         path: 'chatter',
         component: ChatterHomeComponent
+    },
+    {
+        path: 'rollDice',
+        component: RollDiceComponent
     },
     
     {
