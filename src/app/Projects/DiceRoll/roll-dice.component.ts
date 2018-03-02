@@ -9,7 +9,7 @@ import 'rxjs/add/observable/zip';
 @Component({
   selector: 'app-roll-dice',
   templateUrl: "./roll-dice.component.html",
-  styles: []
+  styleUrls: ['./roll-dice.component.css']
 })
 export class RollDiceComponent implements OnInit {
 

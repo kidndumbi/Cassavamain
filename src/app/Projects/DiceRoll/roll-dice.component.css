@@ -1,0 +1,27 @@
+
+.wrapper {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.diceMain{
+    display: flex;
+}
+
+.diceMain1 {
+  flex:1;
+}
+.diceMain2 {
+    flex:1;
+    display:flex
+}
+
+.DiceGroup {
+    flex:1;
+    display: flex;
+} 
+
+.DiceGroupChildren {
+    flex:1;
+}
