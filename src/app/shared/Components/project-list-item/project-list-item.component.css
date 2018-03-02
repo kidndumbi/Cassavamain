@@ -1,0 +1,16 @@
+mat-card-actions {
+    display:flex;
+
+}
+
+mat-chip-list {
+  flex:1;
+  order:2
+}
+.btn1 {
+   flex:1;
+   order:1
+}
+.btn2 {
+    flex:1;
+ }
