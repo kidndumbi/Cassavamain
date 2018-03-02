@@ -1,3 +1,5 @@
+import { DiceComponent } from './Projects/DiceRoll/dice/dice.component';
+import { DiceFrequencyComponent } from './Projects/DiceRoll/dice-frequency/dice-frequency.component';
 import { ProjectHeaderServiceService } from './shared/Services/project-header-service.service';
 import { ProjectSelectComponent } from './project-select/project-select.component';
 import { BrowserModule } from '@angular/platform-browser';
@@ -12,9 +14,10 @@ import { SpotifySearchHomeComponent } from './Projects/SpotifySearch/Components/
 import { appRoutes } from './routing';
 import { RouterModule } from '@angular/router';
 
-import {  } from '';
 import { ProjectHeaderComponent } from './shared/Components/project-header/project-header.component';
 import { ProjectListItemComponent } from './shared/Components/project-list-item/project-list-item.component'
+import { RollDiceComponent } from './Projects/DiceRoll/roll-dice.component';
+import { RollDiceService } from './Projects/DiceRoll/Services/roll-dice.service';
 
 @NgModule({
   declarations: [
@@ -23,7 +26,10 @@ import { ProjectListItemComponent } from './shared/Components/project-list-item/
     SpotifySearchHomeComponent,
     ProjectSelectComponent,
     ProjectHeaderComponent,
-    ProjectListItemComponent
+    ProjectListItemComponent,
+    RollDiceComponent,
+    DiceFrequencyComponent,
+    DiceComponent
   ],
   imports: [
     BrowserModule,
@@ -31,7 +37,7 @@ import { ProjectListItemComponent } from './shared/Components/project-list-item/
     BrowserAnimationsModule,
     MyAngularMaterialModule
   ],
-  providers: [ProjectHeaderServiceService],
+  providers: [ProjectHeaderServiceService, RollDiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

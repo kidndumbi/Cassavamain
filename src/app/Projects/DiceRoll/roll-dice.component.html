@@ -1,0 +1,28 @@
+<div class="row">
+  <div class="col-lg-2" style="margin-top:20px;">
+    <app-dice-frequency [dice]="combineDice$" [bgColor]="'#292b2c'"></app-dice-frequency>
+
+  </div>
+  <div class="col-lg-8">
+    <button (click)="rollDice()" class="btn btn-lg btn-success">Roll Dice</button>
+    <button (click)="emit()" class="btn btn-lg btn-info">Emit</button>
+    <div class="row">
+      <div class="col-lg-2" *ngFor="let d of dice$ | async ">
+        <app-dice [bgColor]="'green'" [selected]="d.success" [dicesize]="diceSize" [diceNumber]="d.side" [boxHeight]="boxHeight"
+          [boxWidth]="boxWidth">
+        </app-dice>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-2" *ngFor="let d of dice2$ | async ">
+        <app-dice [bgColor]="'purple'" [selected]="d.success" [dicesize]="diceSize" [diceNumber]="d.side" [boxHeight]="boxHeight"
+          [boxWidth]="boxWidth">
+        </app-dice>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-2" style="margin-top:20px;">
+    <!-- <app-dice-frequency [dice]="dice2$"  [bgColor]="'purple'"></app-dice-frequency> -->
+
+  </div>
+</div>
