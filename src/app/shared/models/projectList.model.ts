@@ -4,5 +4,5 @@ export interface ProjectList {
     route:string;
     description:string;
     likes:number;
-
+    active: boolean;
 }
