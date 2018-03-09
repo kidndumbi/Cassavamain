@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { _PROJECTLIST } from './shared/projectList';
 import { ProjectList } from './shared/models/projectList.model';
 import { ProjectHeaderServiceService } from './shared/Services/project-header-service.service';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @Component({

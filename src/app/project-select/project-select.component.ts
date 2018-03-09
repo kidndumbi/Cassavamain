@@ -1,3 +1,4 @@
+import { DataServiceService } from './../shared/Services/data-service.service';
 import { ProjectHeaderServiceService } from './../shared/Services/project-header-service.service';
 import { ProjectList } from './../shared/models/projectList.model';
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
@@ -13,12 +14,18 @@ import { Router } from '@angular/router';
 })
 export class ProjectSelectComponent implements OnInit {
 
-  projectList: ProjectList[] = _PROJECTLIST;
+  // projectList: ProjectList[] = _PROJECTLIST;
+  projectList: ProjectList[];
 
-  constructor(private router: Router, private headerService:ProjectHeaderServiceService) { }
+  constructor(private router: Router, 
+    private headerService:ProjectHeaderServiceService, private dataService: DataServiceService) { }
 
   ngOnInit() {
-    
+      
+    this.dataService.getProjectLists().subscribe(projects => {
+         this.projectList = projects;
+    });
+         
   }
 
   receiveSelectedProj(proj:ProjectList){ 
