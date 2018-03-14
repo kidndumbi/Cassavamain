@@ -1,44 +1,44 @@
-<!-- <header class="header">
-		<h1 class="logo"><a routerLink="/projectSelect">CASSAVA</a></h1>
-      <ul class="main-nav">
-          <li><a routerLink="/projectSelect">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
-      </ul>
-</header>  -->
+<mat-sidenav-container class="example-container" (backdropClick)="close('backdrop')">
+  <mat-sidenav #sidenav (keydown.escape)="close('escape')" disableClose>
+    <mat-nav-list (click)="close('mat list click')">
+      <a mat-list-item routerLink="."><span style="width:200px"></span></a>
+      <a mat-list-item routerLink="/projectSelect">Home</a>
+      <a mat-list-item routerLink=".">About</a>
+      <a mat-list-item routerLink=".">Contact</a>
+    </mat-nav-list>
+  </mat-sidenav>
 
-<header>
-  <div class="container">
-      <div id="branding">
-          <h1><span class="highlight">CASSAVA</span></h1>
-      </div>
-      <nav>
+  <mat-sidenav-content>
+    <header>
+      <div class="container">
+        <div id="branding">
+          <h1>
+            <span class="highlight">CASSAVA</span>
+          </h1>
+        </div>
+        <nav>
           <ul>
-              <li class="current">
-                <a routerLink="/projectSelect">Home</a>
-              </li>
-              <li>
-                <a href="#">About</a>
-              </li>
-              <li>
-                <a href="#">Contact</a>
-              </li>
-              <li>
-                <a   class="icon" onclick="myFunction()">
-                  <img src="../assets/images/hamburger1.png" alt="menu" width="50px" >
-                </a>           
-              </li>
+            <li class="current">
+              <a routerLink="/projectSelect">Home</a>
+            </li>
+            <li>
+              <a href="#">About</a>
+            </li>
+            <li>
+              <a href="#">Contact</a>
+            </li>
+            <li>
+              <a class="icon" (click)="sidenav.open()">
+                <img src="../assets/images/hamburger1.png" alt="menu" width="50px">
+              </a>
+            </li>
           </ul>
-      </nav>
-  </div>
-</header>
+        </nav>
+      </div>
+    </header>
 
-<!-- <mat-toolbar style="background-color:white;color:teal">
-  <span>Welcome to Cassava's Hub.</span>
-
-  <app-project-header [projectHeader]="projectHeader" ></app-project-header>
-</mat-toolbar> -->
-
-<div style="margin-left:10px;margin-top:15px">
-  <router-outlet></router-outlet>
-</div>
+    <div style="margin-left:10px;margin-top:15px">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

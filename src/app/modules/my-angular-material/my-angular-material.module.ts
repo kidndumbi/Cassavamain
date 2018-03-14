@@ -5,9 +5,10 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatCardModule } from '@angular/material/card';
-import {MatChipsModule} from '@angular/material/chips';
-import {MatSnackBarModule} from '@angular/material/snack-bar';
-import {MatSidenavModule} from '@angular/material/sidenav';
+import { MatChipsModule } from '@angular/material/chips';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatListModule } from '@angular/material/list';
 
 
 
@@ -22,18 +23,20 @@ import {MatSidenavModule} from '@angular/material/sidenav';
     MatCardModule,
     MatChipsModule,
     MatSnackBarModule,
-    MatSidenavModule
+    MatSidenavModule,
+    MatListModule
 
   ],
   exports: [MatButtonModule,
     MatCheckboxModule,
     MatToolbarModule,
-    MatIconModule, 
+    MatIconModule,
     MatMenuModule,
-    MatChipsModule, 
+    MatChipsModule,
     MatCardModule,
     MatSnackBarModule,
-    MatSidenavModule
+    MatSidenavModule,
+    MatListModule
   ]
   ,
 
