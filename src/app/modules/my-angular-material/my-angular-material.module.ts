@@ -7,6 +7,7 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatCardModule } from '@angular/material/card';
 import {MatChipsModule} from '@angular/material/chips';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
+import {MatSidenavModule} from '@angular/material/sidenav';
 
 
 
@@ -20,7 +21,8 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
     MatMenuModule,
     MatCardModule,
     MatChipsModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatSidenavModule
 
   ],
   exports: [MatButtonModule,
@@ -30,7 +32,9 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
     MatMenuModule,
     MatChipsModule, 
     MatCardModule,
-    MatSnackBarModule]
+    MatSnackBarModule,
+    MatSidenavModule
+  ]
   ,
 
   declarations: []
