@@ -175,3 +175,11 @@ header a:hover {
     overflow: auto;
     border: 1px solid #555;
   }
+
+  .mat-sidenav{
+      background-color: #35424a;
+  }
+
+  mat-nav-list a {
+      color:white;
+  }
