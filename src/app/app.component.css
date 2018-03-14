@@ -59,19 +59,19 @@ nav ul li .icon {
 }
 
 @media screen and (max-width: 600px) {
-	header a {display: none;}
+	nav ul li:not(:last-child) {display: none;}
 	nav ul li .icon {
 	  float: right;
 	  display: block;
 	 
 	}
-	.container #branding {
+	/* .container #branding {
 		flex:1;	
 	}
 	
 	.container nav{
 		flex:1
-	}
+	} */
   }
 
   @media screen and (max-width: 600px) {
