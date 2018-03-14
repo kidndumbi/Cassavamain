@@ -2,9 +2,7 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router'; 
 import { _PROJECTLIST } from './shared/projectList';
 import { ProjectList } from './shared/models/projectList.model';
-import { ProjectHeaderServiceService } from './shared/Services/project-header-service.service';
 import { HttpClientModule } from '@angular/common/http';
-
 
 @Component({
   selector: 'app-root',
@@ -17,18 +15,13 @@ export class AppComponent {
   projects: ProjectList[]  = _PROJECTLIST;
   projectHeader:string;
 
-  constructor(private router: Router, private headerService: ProjectHeaderServiceService){
-
-     this.headerService.headerChange.subscribe(newHeader => {
-          console.log(newHeader);
-          this.projectHeader = newHeader.name;
-     });
+  constructor(private router: Router){
     
   }
 
   routeToProject(proj:ProjectList){
     console.log(proj.route);
-    this.headerService.emitProjectHeaderChange(proj);
+    //this.headerService.emitProjectHeaderChange(proj);
     this.router.navigate([proj.route]);
   }
 

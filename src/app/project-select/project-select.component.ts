@@ -1,5 +1,4 @@
 import { DataServiceService } from './../shared/Services/data-service.service';
-import { ProjectHeaderServiceService } from './../shared/Services/project-header-service.service';
 import { ProjectList } from './../shared/models/projectList.model';
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { _PROJECTLIST } from '../shared/projectList';
@@ -18,7 +17,7 @@ export class ProjectSelectComponent implements OnInit {
   projectList: ProjectList[];
 
   constructor(private router: Router, 
-    private headerService:ProjectHeaderServiceService, private dataService: DataServiceService) { }
+    private dataService: DataServiceService) { }
 
   ngOnInit() {
       
@@ -29,7 +28,6 @@ export class ProjectSelectComponent implements OnInit {
   }
 
   receiveSelectedProj(proj:ProjectList){ 
-    this.headerService.emitProjectHeaderChange(proj);
       this.router.navigate([proj.route]);
   }
 

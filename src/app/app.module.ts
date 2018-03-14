@@ -1,7 +1,6 @@
 import { DataServiceService } from './shared/Services/data-service.service';
 import { DiceComponent } from './Projects/DiceRoll/dice/dice.component';
 import { DiceFrequencyComponent } from './Projects/DiceRoll/dice-frequency/dice-frequency.component';
-import { ProjectHeaderServiceService } from './shared/Services/project-header-service.service';
 import { ProjectSelectComponent } from './project-select/project-select.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -40,7 +39,7 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserAnimationsModule,
     MyAngularMaterialModule
   ],
-  providers: [ProjectHeaderServiceService,
+  providers: [
     RollDiceService, DataServiceService],
   bootstrap: [AppComponent]
 })

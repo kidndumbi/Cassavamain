@@ -1,11 +1,12 @@
 a {
   text-decoration: none;
   text-align: center;
-  color: white;
+  color: #35424a;;
+  font-size: 20px;
 }
 
 a:hover {
-  color: skyblue;
+  color:  #e8491d;
 }
 
 .main {
