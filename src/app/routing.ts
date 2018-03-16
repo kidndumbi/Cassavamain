@@ -1,3 +1,4 @@
+import { KnowledgeSourcesComponent } from './Projects/knowledge-sources/knowledge-sources.component';
 import { RollDiceComponent } from './Projects/DiceRoll/roll-dice.component';
 import { ChatterHomeComponent } from './Projects/Chatter/Components/chatter-home/chatter-home.component';
 import { ProjectSelectComponent } from './project-select/project-select.component';
@@ -26,6 +27,11 @@ export const appRoutes: Routes = [
     {
         path: 'rollDice',
         component: RollDiceComponent
+    },
+    ,
+    {
+        path: 'knowledge',
+        component: KnowledgeSourcesComponent
     },
     
     {

@@ -19,6 +19,7 @@ import { ProjectListItemComponent } from './shared/Components/project-list-item/
 import { RollDiceComponent } from './Projects/DiceRoll/roll-dice.component';
 import { RollDiceService } from './Projects/DiceRoll/Services/roll-dice.service';
 import { HttpClientModule } from '@angular/common/http';
+import { KnowledgeSourcesComponent } from './Projects/knowledge-sources/knowledge-sources.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { HttpClientModule } from '@angular/common/http';
     ProjectListItemComponent,
     RollDiceComponent,
     DiceFrequencyComponent,
-    DiceComponent
+    DiceComponent,
+    KnowledgeSourcesComponent
   ],
   imports: [
     BrowserModule,

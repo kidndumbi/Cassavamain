@@ -26,7 +26,6 @@ export class AppComponent {
 
   routeToProject(proj:ProjectList){
     console.log(proj.route);
-    //this.headerService.emitProjectHeaderChange(proj);
     this.router.navigate([proj.route]);
   }
 
