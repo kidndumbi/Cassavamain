@@ -6,6 +6,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+
 import { MyAngularMaterialModule } from './modules/my-angular-material/my-angular-material.module';
 
 import { AppComponent } from './app.component';
@@ -20,6 +21,7 @@ import { RollDiceComponent } from './Projects/DiceRoll/roll-dice.component';
 import { RollDiceService } from './Projects/DiceRoll/Services/roll-dice.service';
 import { HttpClientModule } from '@angular/common/http';
 import { KnowledgeSourcesComponent } from './Projects/knowledge-sources/knowledge-sources.component';
+import { KnowledgeService } from './Projects/knowledge-sources/Services/knowledge.service';
 
 @NgModule({
   declarations: [
@@ -42,7 +44,7 @@ import { KnowledgeSourcesComponent } from './Projects/knowledge-sources/knowledg
     MyAngularMaterialModule
   ],
   providers: [
-    RollDiceService, DataServiceService],
+    RollDiceService, DataServiceService, KnowledgeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

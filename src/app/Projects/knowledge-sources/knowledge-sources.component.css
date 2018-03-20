@@ -1,3 +1,11 @@
-.testClass {
+.mat-accordion {
+  margin-right: 200px;
+  margin-left: 200px;
+}
+mat-list-item {
+    display: flex;
+}
 
+mat-list-item div{
+    flex: 2;
 }

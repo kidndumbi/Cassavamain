@@ -9,8 +9,10 @@ import { MatChipsModule } from '@angular/material/chips';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
-
-
+import { MatExpansionModule } from '@angular/material/expansion';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material';
+import { MatGridListModule } from '@angular/material/grid-list';
 
 @NgModule({
   imports: [
@@ -24,7 +26,11 @@ import { MatListModule } from '@angular/material/list';
     MatChipsModule,
     MatSnackBarModule,
     MatSidenavModule,
-    MatListModule
+    MatListModule,
+    MatExpansionModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatGridListModule
 
   ],
   exports: [MatButtonModule,
@@ -36,7 +42,11 @@ import { MatListModule } from '@angular/material/list';
     MatCardModule,
     MatSnackBarModule,
     MatSidenavModule,
-    MatListModule
+    MatListModule,
+    MatExpansionModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatGridListModule
   ]
   ,
 
