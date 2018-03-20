@@ -28,7 +28,6 @@ export const appRoutes: Routes = [
         path: 'rollDice',
         component: RollDiceComponent
     },
-    ,
     {
         path: 'knowledge',
         component: KnowledgeSourcesComponent
