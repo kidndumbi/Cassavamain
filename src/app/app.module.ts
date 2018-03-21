@@ -5,6 +5,7 @@ import { ProjectSelectComponent } from './project-select/project-select.componen
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule } from '@angular/forms';
 
 
 import { MyAngularMaterialModule } from './modules/my-angular-material/my-angular-material.module';
@@ -36,14 +37,18 @@ import { EditAddUpdateModalComponent } from './Projects/knowledge-sources/compon
     DiceFrequencyComponent,
     DiceComponent,
     KnowledgeSourcesComponent,
-    EditAddUpdateModalComponent
+    EditAddUpdateModalComponent,
+
+    
   ],
+  entryComponents: [EditAddUpdateModalComponent],
   imports: [
     BrowserModule,
     HttpClientModule,
     RouterModule.forRoot(appRoutes),
     BrowserAnimationsModule,
-    MyAngularMaterialModule
+    MyAngularMaterialModule,
+    FormsModule
   ],
   providers: [
     RollDiceService, DataServiceService, KnowledgeService],

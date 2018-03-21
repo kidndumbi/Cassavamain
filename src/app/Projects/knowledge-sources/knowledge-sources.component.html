@@ -1,4 +1,5 @@
 <div class="mat-accordion">
+  <!-- <button mat-raised-button (click)="openDialog()">Open Dialog</button> -->
   <mat-accordion>
     <mat-expansion-panel *ngFor="let s of sources">
       <mat-expansion-panel-header>
@@ -8,22 +9,24 @@
 
       </mat-expansion-panel-header>
       <button mat-raised-button color="warn">Delete</button>
-      <button mat-raised-button color="warn">New Item</button>
+      <button mat-raised-button color="warn" (click)="addNew(s)">New Item</button>
       <mat-list>
         <mat-list-item *ngFor="let i of s.sources">
           <div>
-              <h4 matLine>{{i.description}}</h4>
-              <p matLine class="demo-2"> <a [href]="i.link">{{i.link}}</a> </p>
+            <h4 matLine>{{i.description}}</h4>
+            <p matLine class="demo-2">
+              <a [href]="i.link">{{i.link}}</a>
+            </p>
           </div>
           <!-- <div class="button-row">
               <button mat-fab color="primary">Edit</button>
               <button mat-fab color="accent" (click)="DeleteSource(s._id, i._id)">Delete</button>
              </div> -->
-             <button mat-icon-button >
-                <mat-icon class="mat-24">delete</mat-icon>
-              </button>
-        </mat-list-item>     
-     </mat-list>
+          <button mat-icon-button>
+            <mat-icon class="mat-24" (click)="DeleteSource(s._id, i._id)">delete</mat-icon>
+          </button>
+        </mat-list-item>
+      </mat-list>
 
 
     </mat-expansion-panel>

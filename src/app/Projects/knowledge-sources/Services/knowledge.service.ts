@@ -24,16 +24,22 @@ export class KnowledgeService {
     
   }
 ///:id/:source_id
-  deleteSourceItem(parnetId: string, sourceId: string):Observable<any>{
-    return this.http.delete(`https://cassavamainbackend.herokuapp.com/api/knowledgeapi/item/${parnetId}/${sourceId}`)
+  deleteSourceItem(parentId: string, sourceId: string):Observable<any>{
+    return this.http.delete(`https://cassavamainbackend.herokuapp.com/api/knowledgeapi/item/${parentId}/${sourceId}`)
     .pipe(
       catchError(this.handleError)
     );
   }
 
-  addSourceItem(){
+  addSourceItem(soureId:string, sourceItem:object):Observable<any>{
 
-     
+    console.log(soureId, sourceItem);
+   
+     return this.http.post(`http://localhost:3000/api/knowledgeapi/item/${soureId}`, sourceItem)
+     .pipe(
+      catchError(this.handleError)
+    );
+       
   }
 
   private handleError(error: HttpErrorResponse) {
