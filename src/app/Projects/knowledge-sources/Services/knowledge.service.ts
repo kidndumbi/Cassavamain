@@ -35,7 +35,7 @@ export class KnowledgeService {
 
     console.log(soureId, sourceItem);
    
-     return this.http.post(`http://localhost:3000/api/knowledgeapi/item/${soureId}`, sourceItem)
+     return this.http.post(`https://cassavamainbackend.herokuapp.com/api/knowledgeapi/item/${soureId}`, sourceItem)
      .pipe(
       catchError(this.handleError)
     );
