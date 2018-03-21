@@ -20,19 +20,23 @@ export class KnowledgeSourcesComponent implements OnInit {
 
   ngOnInit() {
      
-      this.kServe.getAllKnowledgeSources()
-      .subscribe(data => {
-          console.log(data);
-          this.sources = data;
-      });
+     this.GetAllKnowledgeSources();
 
   }
 
+  GetAllKnowledgeSources(){
+    this.kServe.getAllKnowledgeSources()
+    .subscribe(data => {
+        console.log(data);
+        this.sources = data;
+    });
+  }
+
   DeleteSource(parentId, sourceId){
-      this.kServe.deleteSource(parentId, sourceId)
+      this.kServe.deleteSourceItem(parentId, sourceId)
       .subscribe(data => {
-           
-      })
+        this.GetAllKnowledgeSources();
+      });
   }
 
 }

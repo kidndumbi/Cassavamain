@@ -22,6 +22,7 @@ import { RollDiceService } from './Projects/DiceRoll/Services/roll-dice.service'
 import { HttpClientModule } from '@angular/common/http';
 import { KnowledgeSourcesComponent } from './Projects/knowledge-sources/knowledge-sources.component';
 import { KnowledgeService } from './Projects/knowledge-sources/Services/knowledge.service';
+import { EditAddUpdateModalComponent } from './Projects/knowledge-sources/components/edit-add-update-modal/edit-add-update-modal.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { KnowledgeService } from './Projects/knowledge-sources/Services/knowledg
     RollDiceComponent,
     DiceFrequencyComponent,
     DiceComponent,
-    KnowledgeSourcesComponent
+    KnowledgeSourcesComponent,
+    EditAddUpdateModalComponent
   ],
   imports: [
     BrowserModule,

@@ -13,6 +13,7 @@ import { MatExpansionModule } from '@angular/material/expansion';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material';
 import { MatGridListModule } from '@angular/material/grid-list';
+import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
   imports: [
@@ -30,7 +31,8 @@ import { MatGridListModule } from '@angular/material/grid-list';
     MatExpansionModule,
     MatFormFieldModule,
     MatInputModule,
-    MatGridListModule
+    MatGridListModule,
+    MatDialogModule
 
   ],
   exports: [MatButtonModule,
@@ -46,7 +48,8 @@ import { MatGridListModule } from '@angular/material/grid-list';
     MatExpansionModule,
     MatFormFieldModule,
     MatInputModule,
-    MatGridListModule
+    MatGridListModule,
+    MatDialogModule
   ]
   ,
 
