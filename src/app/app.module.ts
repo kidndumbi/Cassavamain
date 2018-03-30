@@ -1,3 +1,4 @@
+import { AuthService } from './services/auth.service';
 import { DataServiceService } from './shared/Services/data-service.service';
 import { DiceComponent } from './Projects/DiceRoll/dice/dice.component';
 import { DiceFrequencyComponent } from './Projects/DiceRoll/dice-frequency/dice-frequency.component';
@@ -49,7 +50,7 @@ import { LoginComponent } from './components/login/login.component';
     FormsModule
   ],
   providers: [
-    RollDiceService, DataServiceService, KnowledgeService],
+    RollDiceService, DataServiceService, KnowledgeService, AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
